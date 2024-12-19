@@ -1,0 +1,64 @@
+GET http://localhost:5000/api/
+
+###
+POST http://localhost:5000/api/register
+Content-Type: application/json 
+
+{
+    "email": "library3@gmail.com",
+    "password": "teja"
+}
+###
+POST http://localhost:5000/api/login
+Content-Type: application/json 
+
+{
+    "email": "teja11@gmail.com",
+    "password": "teja"
+}
+###
+POST http://localhost:5000/api/admin-login
+Content-Type: application/json 
+
+{
+    "email": "library@gmail.com",
+    "password": "teja",
+    "role": "librarian"
+}
+###
+GET http://localhost:5000/api/books
+
+###
+POST http://localhost:5000/api/borrow_request/214a5d12-1ab4-4565-b3c2-78b1fda42e3d
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InRlamEyQGdtYWlsLmNvbSIsInJvbGUiOiJ1c2VyIiwiaWQiOiJhOTQzNWVhZC04NDFlLTRiOGItODE0Zi1jMzg3NjUxZTIyMDAiLCJpYXQiOjE3MzM3NDA5ODN9.GxEp54Ebci7BJfk5QzYjKPMPcLD5dxGJu1r6yu_zjh4
+Content-Type: application/json 
+
+{
+    "start_date": "2024-11-12",
+    "end_date": "2024-12-12"
+}
+###
+GET http://localhost:5000/api/borrow_requests
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImxpYnJhcnlAZ21haWwuY29tIiwicm9sZSI6ImxpYnJhcmlhbiIsImlkIjoiNDEwOTBjN2UtMTg1My00YzMxLTgxODEtNDRhNDU4MjYwYjUwIiwiaWF0IjoxNzMzNjc0MDgzfQ.lJ-EwG90yst75nXljXp_eECmjI-98d-mJYneE2mjL1c
+###
+PUT http://localhost:5000/api/borrow_requests/39cc4c87-34fb-425e-b6c8-612d49aab2ad/approve
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImxpYnJhcnlAZ21haWwuY29tIiwicm9sZSI6ImxpYnJhcmlhbiIsImlkIjoiNDEwOTBjN2UtMTg1My00YzMxLTgxODEtNDRhNDU4MjYwYjUwIiwiaWF0IjoxNzMzNjc0MDgzfQ.lJ-EwG90yst75nXljXp_eECmjI-98d-mJYneE2mjL1c
+
+###
+PUT http://localhost:5000/api/borrow_requests/39cc4c87-34fb-425e-b6c8-612d49aab2ad/deny
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImxpYnJhcnlAZ21haWwuY29tIiwicm9sZSI6ImxpYnJhcmlhbiIsImlkIjoiNDEwOTBjN2UtMTg1My00YzMxLTgxODEtNDRhNDU4MjYwYjUwIiwiaWF0IjoxNzMzNjc0MDgzfQ.lJ-EwG90yst75nXljXp_eECmjI-98d-mJYneE2mjL1c
+
+###
+GET http://localhost:5000/api/users/6417ecf6-5108-4c39-8ea8-c149222c06a1/history
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InRlamExQGdtYWlsLmNvbSIsInJvbGUiOiJ1c2VyIiwiaWQiOiI2NDE3ZWNmNi01MTA4LTRjMzktOGVhOC1jMTQ5MjIyYzA2YTEiLCJpYXQiOjE3MzM3MzIyOTF9.U7hWZHZxrWFTDz2nl1bh1uAd7O3Q93BlKzEcOF_Rj_Y
+
+###
+GET http://localhost:5000/api/book-request/0b124c5d-11f0-4b95-9d1b-e2c23e8b29f2
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InRlamExQGdtYWlsLmNvbSIsInJvbGUiOiJ1c2VyIiwiaWQiOiI2NDE3ZWNmNi01MTA4LTRjMzktOGVhOC1jMTQ5MjIyYzA2YTEiLCJpYXQiOjE3MzM3MzIyOTF9.U7hWZHZxrWFTDz2nl1bh1uAd7O3Q93BlKzEcOF_Rj_Y
+
+###
+GET http://localhost:5000/api/user/6417ecf6-5108-4c39-8ea8-c149222c06a1
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImxpYnJhcnlAZ21haWwuY29tIiwicm9sZSI6ImxpYnJhcmlhbiIsImlkIjoiNDEwOTBjN2UtMTg1My00YzMxLTgxODEtNDRhNDU4MjYwYjUwIiwiaWF0IjoxNzMzODAxMjY2fQ.akzEW_f1JQhJqT35GriHWYTlEVNeLFRnZSll_EWFFEg
+###
+GET http://localhost:5000/api/single-borrow-request/39cc4c87-34fb-425e-b6c8-612d49aab2ad
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImxpYnJhcnlAZ21haWwuY29tIiwicm9sZSI6ImxpYnJhcmlhbiIsImlkIjoiNDEwOTBjN2UtMTg1My00YzMxLTgxODEtNDRhNDU4MjYwYjUwIiwiaWF0IjoxNzMzODAxMjY2fQ.akzEW_f1JQhJqT35GriHWYTlEVNeLFRnZSll_EWFFEg
