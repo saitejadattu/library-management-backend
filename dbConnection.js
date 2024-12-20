@@ -4,14 +4,12 @@ const HOST = process.env.HOST
 const USER = process.env.USER
 const PASSWORD = process.env.PASSWORD
 const DATABASE = process.env.DATABASE
-const PORT = process.env.PORT
 // console.log(HOST,USER,PASSWORD,DATABASE)
 const db = mysql.createConnection({
     host: HOST,
     user: USER,
     password: PASSWORD,
-    database: DATABASE,
-    port: PORT
+    database: DATABASE
 })
 db.connect((error) => {
     if (error) {
